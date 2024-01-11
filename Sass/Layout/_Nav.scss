@@ -1,0 +1,23 @@
+/* ******************** */
+/*       Nav Bar        */
+/* ******************** */
+.active{
+    color:$blue !important;
+}
+nav{
+    @extend %background-gradiant;
+    & *{ font-weight: bold !important;}
+    .navbar-brand{
+        font-size:24px !important;
+        span{font-size:27px !important;}
+        &:hover{color:$blue !important;}
+    }
+    li{
+        text-align: center;
+        a{
+            color:$Tc-light !important;
+            &:hover{color:$blue !important;}
+        }   
+    }
+    
+}

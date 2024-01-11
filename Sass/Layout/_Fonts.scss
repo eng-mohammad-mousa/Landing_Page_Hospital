@@ -1,0 +1,23 @@
+/* ******************* */
+/*        Font         */
+/* ******************* */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300&display=swap');
+html{
+	font-size: 16px;
+}
+html *{
+	font-family: 'Roboto', sans-serif;
+	text-decoration: none;
+	text-transform: capitalize;
+	font-weight: 400;
+	&::selection{
+        background-color:$black;
+        color:white;
+    }
+}
+span , i{
+	color:$blue;
+}
+p{
+	text-transform: none;
+}

@@ -1,0 +1,13 @@
+*{
+    transition: all .2s linear;
+    border:none;
+	padding: 0px;
+	margin: 0px;
+	box-sizing:border-box;
+	outline:none;
+	scroll-behavior: smooth;
+}
+
+.container-of-body > section:not(:first-of-type){
+	padding-top: 58.5px;
+}

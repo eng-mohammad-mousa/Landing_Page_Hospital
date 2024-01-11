@@ -1,0 +1,263 @@
+// *************************
+//        Body
+// *************************
+body{
+    height:100%;
+
+}
+.container-of-body{
+    position: relative;
+    height:fit-content;
+    width: 100%;
+    overflow-y:auto
+}
+// *************************
+//   Layer Above Body
+// *************************
+
+// For Fire Fox 
+* , :root{
+	scrollbar-color: $blue $black;
+	scrollbar-width: thin;
+}
+// For Chrome And Opera
+::-webkit-scrollbar{
+	width:8px;
+	height:8px;
+}
+::-webkit-scrollbar-track{
+	background-color: $black;
+}
+::-webkit-scrollbar-thumb{
+	height:8px;
+	background-color:$blue;
+	border: 1px solid transparent;
+	border-radius: 10px;
+	background-clip: padding-box; 
+}
+
+// *************************
+//     Header & About 
+// *************************
+header , section.about{
+    & .container > .row{
+        min-height: 100vh;
+        & > *{
+            color: $black;
+        }
+    }    
+}
+// *************************
+//        About 
+// *************************
+section.about{
+    @include img-with-gradiant-layer('../Img/wallpaper-about-section.jpeg');
+    .box{
+        margin:3rem 0px;
+        background-color:rgb(240, 238, 238);
+        padding:10px;
+        border-radius: 15px;
+        @media screen and (min-width:768px) {
+            &:hover{transform: scale(1.025)}
+        }
+        p{
+            color:$Tc-dark;
+            @media screen and (min-width:768px) {margin-top:-20px;}  
+        }
+    }
+}
+// *************************
+//        Facility 
+// *************************
+section.facility{
+    .box{
+        width:22%;
+        height:17rem;
+        margin:10px;    
+        border-radius:5px;
+        overflow:hidden;
+        @media screen and (max-width:991px) {width:45%; height:17rem }
+        @media screen and (max-width:576px) {width:80%; height:15rem }
+        img{
+            height:100%;
+            width:100%;
+            object-fit: cover;
+            &:hover{transform: scale(1.15) }
+        }
+    }
+}
+// *************************
+//        Review 
+// *************************
+section.review{
+    @include img-with-gradiant-layer('../Img/wallpaper-review-section.jpg');
+    padding-bottom: 100px; //6rem
+    margin-top:35px;
+    h1{color:#fff;}
+    .box{
+        width:30%;
+        position:relative;
+        margin:10px;
+        background-color:white;
+        padding:10px;
+        border-radius: 10px 10px 10px 5px;
+        @media screen and (max-width:767px) {
+            width:100%;
+            margin-bottom:100px;
+        }
+        p{
+            margin-bottom:20px;
+            color:$Tc-dark;
+        }
+        h5{color:$blue;}
+        span{color:$Tc-xlight;}
+        h5, span{
+            text-align: right !important;
+            display:block;
+            margin-bottom: 0px;
+        }
+        img{
+            width:60px;
+            height:60px;
+            border-radius: 50%;
+            position: absolute;
+            bottom: -85px;
+            left: -10px;
+            object-fit: cover;
+            border:1px solid black;
+            @extend .hvr-buzz-out;
+        }
+        &::after{
+            content: "";
+            border-width:20px;
+            border-style: solid;
+            border-color:white transparent transparent transparent;
+            position:absolute;
+            bottom: -37px;
+            left: 0px;
+        }
+    }
+}
+// *************************
+//      Informatioin 
+// *************************
+section.information{
+    .box-container{
+        .box{
+            width: 17.5%;
+            text-align: center;
+            margin:10px 10px;
+            @media screen and (max-width:767px) {
+                width:40%;
+                margin:30px 15px;
+            }
+            & *{
+                display: block;
+                
+            }
+            i{
+                font-size:55px;//5rem
+            }
+            span{
+                color:$black;
+                margin:15px 0px 0px;
+                font-size:45px;//3rem//
+            }
+            h3{
+                color:$Tc-dark;
+                margin:0px;
+            }
+        }
+    }
+}
+// *************************
+//      Contact 
+// *************************
+section.contact{
+    @include img-with-gradiant-layer("../Img/wallpaper-contact-section.jpg");
+    // @media screen and (max-width:1399px) {min-height: 100vh;}
+    h1{
+        color:#fff;
+    }
+    form{
+        padding:30px 0px 50px;
+    }
+    .form-control , .form-select{
+        color:$Tc-light;
+        background-color: rgba(1, 1, 1, 0.15);
+        
+    }
+    .form-control:focus{
+        background-color: rgba(1, 1, 1, 0.45);
+    }
+    option{
+        color:black;
+    }
+    .website a{
+        position: relative;
+        @extend .hvr-float;
+    }
+   
+}
+// *************************
+//      Post 
+// *************************
+section.post{
+    padding-bottom:40px;
+    .card{
+        width:30%;
+        overflow:hidden;
+        border-radius: 10px; 
+        box-shadow:1px 1px 15px #666, -1px -1px 15px #666;
+        @media screen and (max-width:991px) {width:45%; margin:15px 2.5% }
+        @media screen and (max-width:576px) {width:80%; margin:15px;}
+        &:nth-of-type(2){
+            @media screen and (min-width:992px) {margin:0px 5%;}   
+        }
+        &:hover{
+            box-shadow:3px 3px 15px #666, -3px -3px 15px #666;
+            .card-title{color:$blue;}
+            img{transform:scale(1.1);
+            }
+        }
+        .card-img-top{
+            width:100%;
+            height:200px;
+            overflow:hidden;
+        }
+        img{
+            width:100%;
+            height:100%;
+            object-fit: cover;
+        }
+        span.card-text{
+            color:$Tc-xlight;
+            margin-top:-5px;
+            display: block;
+            text-align:end;
+        }
+        .card-title{
+            margin:10px 0px 0px;
+            font-weight: bold;
+        }
+        p.card-text{color:$Tc-dark;}
+    }
+}
+// *************************
+//      Up Arrow 
+// *************************
+.up-arrow{
+    position:fixed;
+    bottom:20px;
+    right:15px;
+    cursor: pointer;
+    text-decoration: none;
+    display:none;
+    width:40px;
+    height:40px;
+    @extend .hvr-wobble-vertical;
+    @media screen and (min-width:768px) {
+        width:56px; height:56px;
+        bottom:30px;right:30px;
+    }
+}

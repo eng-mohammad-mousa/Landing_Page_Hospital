@@ -1,0 +1,13 @@
+@import "Helpers/Variables";
+@import "Helpers/MixinsWidthMainClass";
+@import "Layout/Fonts";
+
+@import "Layout/StyleForAllElement";
+
+@import "Layout/Nav";
+@import "Pages/Hospital";
+@import "Layout/Footer";
+
+
+//sass --watch A:\Landing_Pages\Landing_Page_Hospital\Sass:A:\Landing_Pages\Landing_Page_Hospital\Css
+//sass --watch A:\Landing_Pages\Landing_Page_Hospital\Sass:A:\Landing_Pages\Landing_Page_Hospital\Css --style compressed
